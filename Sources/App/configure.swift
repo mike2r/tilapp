@@ -18,7 +18,14 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     services.register(middlewares)
 
     // Configure a PostgreSQL database
-    let databaseConfig = PostgreSQLDatabaseConfig(hostname: "localhost", username: "vapor", database: "vapor", password: "password")
+    let hostname = Environment.get("DATABASE_HOSTNAME") ?? "kalanieast.cifrahp0izue.us-east-1.rds.amazonaws.com"
+    let username = Environment.get("DATABASE_USER") ?? "mrruch"
+    let databaseName = Environment.get("DATABASE_DB") ?? "tilapp"
+    let password = Environment.get("DATABASE_PASSWORD") ?? "4fitness"
+    let databaseConfig = PostgreSQLDatabaseConfig(hostname: hostname,
+                                                  username: username,
+                                                  database: databaseName,
+                                                  password: password)
 
     /// Register the configured PostgreSQL database to the database config.
     let database = PostgreSQLDatabase(config: databaseConfig)
