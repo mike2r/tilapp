@@ -22,6 +22,7 @@ struct AcronymsController: RouteCollection {
         acronymRoutes.get("sorted", use: sortedHandler)
         acronymRoutes.get(Acronym.parameter, "user", use: getUserHandler)
         acronymRoutes.post(Acronym.parameter, "categories", Category.parameter, use: addCategoriesHandler)
+        acronymRoutes.get(Acronym.parameter,"categories", use: getCategoriesHandler)
         acronymRoutes.delete(Acronym.parameter, "categories", Category.parameter, use: removeCategoriesHandler)
     }
     
