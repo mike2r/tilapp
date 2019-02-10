@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Auth",
+        "repositoryURL": "https://github.com/vapor/auth.git",
+        "state": {
+          "branch": null,
+          "revision": "90868627c7587ea207c0b6d4054265e68f6a33ef",
+          "version": "2.0.1"
+        }
+      },
+      {
         "package": "Console",
         "repositoryURL": "https://github.com/vapor/console.git",
         "state": {
@@ -62,6 +71,15 @@
           "branch": null,
           "revision": "272b22be8cb3364e42a4701c2e0676e37480ec5a",
           "version": "3.1.5"
+        }
+      },
+      {
+        "package": "Leaf",
+        "repositoryURL": "https://github.com/vapor/leaf.git",
+        "state": {
+          "branch": null,
+          "revision": "d35f54cbac723e673f9bd5078361eea74049c8d7",
+          "version": "3.0.2"
         }
       },
       {
